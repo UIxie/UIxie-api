@@ -23,4 +23,6 @@ router.post("/create", async (req, res) => {
   }
 });
 
+router.post("/login", AuthUserController.login);
+
 module.exports = router;
