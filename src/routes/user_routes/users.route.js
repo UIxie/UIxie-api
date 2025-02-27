@@ -4,6 +4,7 @@ const router = express.Router();
 const User = require("../../models/users/user.model");
 
 const AuthUserController = require("../../controllers/userController/authController/authUserController");
+const AccountDetailsController = require("../../controllers/userController/accountController/accountDetailsController");
 
 router.get("/getAll", async (req, res) => {
   try {
@@ -24,5 +25,6 @@ router.post("/create", async (req, res) => {
 });
 
 router.post("/login", AuthUserController.login);
+router.get("/profile", AccountDetailsController.getProfile);
 
 module.exports = router;
